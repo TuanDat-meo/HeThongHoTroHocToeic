@@ -1,14 +1,12 @@
-version: "3.9"
-
 services:
   postgres:
-    image: postgres:16
+    image: pgvector/pgvector:pg16
     container_name: toeic-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: toeic_ai
+      POSTGRES_DB: toeic_ai_learning
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: changeme
+      POSTGRES_PASSWORD: TuanDat0608
     ports:
       - "5432:5432"
     volumes:
@@ -25,6 +23,10 @@ services:
       - postgres
     env_file:
       - .env
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/toeic_ai_learning
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: TuanDat0608
 
   frontend:
     build:
