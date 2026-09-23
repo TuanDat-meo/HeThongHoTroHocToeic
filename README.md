@@ -356,7 +356,7 @@ DTO được tách khỏi Entity để hạn chế phụ thuộc giữa model DB
 | Version Control | Git + GitHub | Quản lý mã nguồn |
 | CI/CD | GitHub Actions | Tự động build/test |
 | Message Queue (Phase 2) | RabbitMQ (tùy chọn) | Xử lý AI request bất đồng bộ và rate-limit khi tải tăng |
-| Vector Search (Phase 2) | PostgreSQL + pgvector | RAG/retrieval theo dữ liệu nội bộ |
+| Vector Search (MVP) | PostgreSQL + pgvector | RAG/retrieval theo dữ liệu nội bộ |
 | Cache (Phase 2, tùy nhu cầu) | Redis | Cache và giảm truy vấn lặp khi tải tăng |
 
 ### 5.1. Nguyên tắc chi phí
